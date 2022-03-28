@@ -1,17 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> adj = { {},
-											   {2},
-											   {1, 3, 5 },
-											   {2},
-											   {},
-											   {2},
-											   {7},
-											   {6} };
+const int MAX = 20;
+
+vector<vector<int>> adj = { 
+													 {},
+													 {2},
+													 {1, 3, 5 },
+													 {2},
+													 {},
+													 {2},
+													 {7},
+													 {6} 
+															};
 
 
-bitset<20> vistado ;
+bitset<MAX> vistado ;
 
 void dfs(int u){
 	if (vistado[u])
