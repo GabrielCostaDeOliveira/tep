@@ -7,12 +7,13 @@ using namespace std;
 vector<vector<int>> adj {
 	{},
 	{2},
-	{1, 3,4,6},
+	{1,3,4,6},
 	{2},
-	{2, 5, 6},
-	{4},
-	{2, 6}
+	{2, 6},
+	{6},
+	{2, 4}
 };
+
 bitset<MAX> visitado;
 
 bool temCiclo(int u, int p= -1){
