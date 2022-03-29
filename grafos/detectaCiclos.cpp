@@ -17,6 +17,7 @@ vector<vector<int>> adj {
 bitset<MAX> visitado;
 
 bool temCiclo(int u, int p= -1){
+	//detecta ciclos apenas em um compente conectado
 	if(visitado[u])
 		return false;
 
