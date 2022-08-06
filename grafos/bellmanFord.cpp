@@ -10,7 +10,7 @@ vector<int> bellmanfor(int s/*start*/, int N /*n de vertice*/, const vector<edge
 	vector<int> dist(N + 1, oo);
 	dist[s] = 0;
 
-	for (int i = 1; i <= N -1; i++)
+	for (int i = 1; i <= N - 1; i++)
 		for (auto [u, v, w] : edges)
 			if (dist[u] < oo and dist[v] > dist[u] + w )
 				dist[v] = dist[u] +w; // relaxamanro 
@@ -22,7 +22,7 @@ vector<int> bellmanfor(int s/*start*/, int N /*n de vertice*/, const vector<edge
 int main(){
 	int u, v, w;
 
-	vector<tuple<int, int, int>> edges {{0, 0, 0}};
+	vector<edge> edges {{0, 0, 0}};
 
 	//leitua da lista de arestas
 	 do{
