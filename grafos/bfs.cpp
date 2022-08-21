@@ -6,21 +6,21 @@ const int MAX = 13;
 
 vector<vector<int>> adj {
 {},
-{2, 3},      //1
-{4, 5},      //2
-{6},         //3
-{},          //4
-{2,6,8, 9},  //5
-{3,5,7, 10}, //6
-{},          //7
-{11},        //8
-{5,10},      //9
-{9, 6},      //10
-{12, 13},    //11
-{},          //12
-{}};         //13
+{2, 3},         //1
+{1, 4, 5},      //2
+{1, 6},         //3
+{2},            //4
+{2, 6, 8, 9},   //5
+{3, 5,7 , 10},  //6
+{6},            //7
+{5, 11},        //8
+{5, 10},        //9
+{6, 9},         //10
+{8, 12, 13},    //11
+{11},           //12
+{11}};          //13
 
-bitset<MAX+1> colocado_na_lista;
+bitset<MAX+1> visited;
 
 void bfs1(int u){
 	queue<int> q;
@@ -31,8 +31,8 @@ void bfs1(int u){
 
 		cout << u << " ";
 		for(int v : adj[u])
-			if (not colocado_na_lista[v]){
-				colocado_na_lista[v] = true; 
+			if (not visited[v]){
+				visited[v] = true; 
 				q.push(v);
 			}
 	}
