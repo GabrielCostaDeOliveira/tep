@@ -4,6 +4,11 @@ using namespace std;
 
 using edge = tuple<int, int, int>;
 
+// cominho mínimos de fonte únicas
+// É capaz de processar arestas negativas
+// identifica ciclos negativos
+// O(V*E)
+
 vector<int> bellmanfor(int s/*start*/, int N /*n de vertice*/, const vector<edge> & edges /*lista de arestas*/ ){
 	const int oo {1000000010};
 
