@@ -1,0 +1,27 @@
+#n = int(input());
+
+
+def has7(n):
+    while n:
+        if (7 & n) == 3:
+            return True
+
+        print(n)
+        
+        n <<= 2
+        
+
+
+    return False
+
+
+##  res = 0
+##  for i in range(100000 + 1):
+##      if  "7" in str(i) or has7(n):
+##          res += 1
+
+##  print(res)
+
+        
+    
+
