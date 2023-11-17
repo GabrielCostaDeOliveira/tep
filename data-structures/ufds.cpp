@@ -1,7 +1,7 @@
 template<typename T> 
-struct SIMPLE_UFDS{
+struct UFDS{
   std::vector<T> ps;
-  SIMPLE_UFDS(T n):ps(n){
+  UFDS(T n):ps(n){
     iota(ps.begin(), ps.end(), 0);
   }
 
