@@ -1,8 +1,10 @@
+#include <numeric>
+#include <vector>
 template<typename T> 
 struct UFDS{
   std::vector<T> ps;
   UFDS(T n):ps(n){
-    iota(ps.begin(), ps.end(), 0);
+    std::iota(ps.begin(), ps.end(), 0);
   }
 
 
