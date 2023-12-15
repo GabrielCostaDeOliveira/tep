@@ -20,9 +20,6 @@ struct UFDS{
     T p = find_set(a);
     T q = find_set(b);
 
-    if (p == q)
-      return;
-
     ps[q] = p;
   }
 
