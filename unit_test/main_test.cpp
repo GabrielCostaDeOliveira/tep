@@ -2,6 +2,7 @@
 
 #include "./data-structures/UFDS.cpp"
 #include "./data-structures/SegTree.cpp"
+#include "./MD/fast_pow.cpp"
 
 int main(int argc, char** argv){
 
