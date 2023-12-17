@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
+
 #include "./data-structures/UFDS.cpp"
+#include "./data-structures/SegTree.cpp"
 
 int main(int argc, char** argv){
 

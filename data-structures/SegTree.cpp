@@ -41,20 +41,20 @@ public:
   }
 
 
-  T query(size_t l, size_t r) {
+  T query(size_t a, size_t b) {
 
-    l+= p;
-    r+= p;
+    a+= p;
+    b+= p;
 
     T la = e, ra = e;
 
-    while (l <= r) {
+    while (a <= b) {
 
-      if ( l & 1) la = op(ps[l++], la);
-      if (~r & 1) ra = op(ra, ps[r--]);
+      if ( a & 1) la = op(ps[a++], la);
+      if (~b & 1) ra = op(ra, ps[b--]);
 
-      l>>=1;
-      r>>=1;
+      a>>=1;
+      b>>=1;
     }
 
 
