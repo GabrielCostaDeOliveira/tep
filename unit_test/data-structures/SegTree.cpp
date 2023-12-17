@@ -36,3 +36,21 @@ TEST ( SegTree, QUERY_UPDATE_MIN){
 }
 
 
+TEST(SegTree, QUERY_UPDATE_XOR ){
+
+  using ll = long long;
+
+  SegTree<ll> st(8, 0, std::bit_xor<ll>());
+
+  int i = 0;
+  for ( auto v : {3, 2, 4, 5, 1, 1, 5, 3})
+    st.update(i++, v);
+
+
+  ASSERT_EQ(st.query(1, 3), 3);
+  ASSERT_EQ(st.query(4, 5), 0);
+  ASSERT_EQ(st.query(0, 7), 6);
+  ASSERT_EQ(st.query(2, 2), 4);
+
+}
+
