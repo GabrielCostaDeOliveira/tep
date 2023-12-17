@@ -1,16 +1,16 @@
-#include <bits/stdc++.h>
+#include <limits>
 #include <queue>
+#include <vector>
 
-using namespace std;
+template <typename  T>
+std::vector<T> dijkstra(T s, const std::vector<std::vector<std::pair<T, T>>> &adj){
 
-vector<int> dijkstra(int s, const vector<vector<pair<int, int>>> &adj){
-
-  const long long oo = 1e9;
-  vector<bool> visited(adj.size(), false);
-  vector<int> dist(adj.size(), oo);
+  const T oo = std::numeric_limits<T>::max();
+  std::vector<bool> visited(adj.size(), false);
+  std::vector<T> dist(adj.size(), oo);
   dist[s] = 0;
 
-  priority_queue<pair<int,int>, vector<pair<int, int>>, greater<pair<int,int>>> pq;
+  std::priority_queue<std::pair<T,T>, std::vector<std::pair<T, T>>, std::greater<std::pair<T,T>>> pq;
   pq.emplace(0, s);
 
   while (not pq.empty()){
