@@ -2,7 +2,9 @@
 
 #include "./data-structures/UFDS.cpp"
 #include "./data-structures/SegTree.cpp"
+
 #include "./MD/fast_pow.cpp"
+#include "./MD/sieve.cpp"
 #include "./MD/fat.cpp"
 
 int main(int argc, char** argv){
