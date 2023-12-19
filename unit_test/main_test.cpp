@@ -7,6 +7,8 @@
 #include "./MD/sieve.cpp"
 #include "./MD/fat.cpp"
 
+#include "./graph/hasCycleDirectedGraph.cpp"
+
 int main(int argc, char** argv){
 
   testing::InitGoogleTest(&argc, argv);
