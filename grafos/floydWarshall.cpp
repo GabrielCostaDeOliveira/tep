@@ -2,26 +2,26 @@
 
 using namespace std;
 
-const int oo = 1e9;
+using ll = long long;
 
-std::vector<std::vector<int>> floyd_warshall(int N, std::vector<std::vector<pair<int, int>>> adj){
+const ll oo = 9e18;
 
-  std::vector<vector<int>> dist(N+1, std::vector<int>(N+1, oo));
+std::vector<std::vector<ll>>
+floyd_warshall(ll n, const std::vector<std::tuple<ll, ll, ll>> &adj) {
 
-	for ( int u = 1; u <= N; u++ )
-		dist[u][u] = 0;
+  std::vector<vector<ll>> dist(n, std::vector<ll>(n, oo));
 
-	for ( int u = 1; u <= N; u++ )
-		for ( auto [v, w] : adj[u] )
-			dist[u][v] = w;
+  for (ll u = 0; u < n; u++)
+    dist[u][u] = 0;
 
-	for ( int k = 1; k <= N; k++ )
-		for ( int u = 1; u <= N; u++ )
-			for ( int v = 1; v <= N; v++ )
-				if ( dist[u][k] < oo and dist[k][v] < oo )
-					dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+  for (const auto &[a, b, w] : adj) 
+    dist[a][b] = min(w, dist[a][b]);
 
+  for (ll k = 0; k < n; k++)
+    for (ll u = 0; u < n; u++)
+      for (ll v = 0; v < n; v++)
+        if (dist[u][k] < oo and dist[k][v] < oo)
+          dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
 
-	return dist;
+  return dist;
 }
-
