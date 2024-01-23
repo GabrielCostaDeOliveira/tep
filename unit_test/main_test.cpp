@@ -9,6 +9,8 @@
 
 #include "./graph/hasCycleDirectedGraph.cpp"
 
+#include "./string/edit_distance.cpp"
+
 int main(int argc, char** argv){
 
   testing::InitGoogleTest(&argc, argv);
