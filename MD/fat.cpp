@@ -17,7 +17,7 @@ std::map<long long, long long> fat(long long n){
       m[i] = q;
   }
 
-  if ( n != 1)
+  if ( n > 1)
     m[n] = 1;
 
 
