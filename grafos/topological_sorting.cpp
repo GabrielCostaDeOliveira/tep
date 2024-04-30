@@ -11,7 +11,7 @@ std::vector<T> topological_sort(const std::vector<std::vector<T>> &adj){
     visited[u] = true;
 
     for (T v : adj[u])
-      if(not visited[u])
+      if(not visited[v])
         dfs(v);
 
     o.push_back(u);
