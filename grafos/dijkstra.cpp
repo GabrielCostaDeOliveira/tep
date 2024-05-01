@@ -1,35 +1,36 @@
-#include <limits>
-#include <queue>
-#include <vector>
+#include <bits/stdc++.h>
 
 template <typename  T>
 std::vector<T> dijkstra(T s, const std::vector<std::vector<std::pair<T, T>>> &adj){
-
+ 
   const T oo = std::numeric_limits<T>::max();
-  std::vector<bool> visited(adj.size(), false);
+ 
   std::vector<T> dist(adj.size(), oo);
   dist[s] = 0;
-
-  std::priority_queue<std::pair<T,T>, std::vector<std::pair<T, T>>, std::greater<std::pair<T,T>>> pq;
-  pq.emplace(0, s);
-
-  while (not pq.empty()){
-
-    auto [d, u] = pq.top();
-    pq.pop();
-
-    if (visited[u])
+ 
+  std::set<std::pair<T,T>> st;
+  st.emplace(0, s);
+ 
+  std::vector visited(adj.size(), false);
+ 
+  while (not st.empty()) {
+ 
+    int d, u;
+    std::tie(d, u) = *st.begin();
+    st.erase(st.begin());
+ 
+    if ( visited[u] )
       continue;
-
+ 
     visited[u] = true;
-
-    for (auto [w, v] : adj[u])
-      if ( dist[u] + w < dist[v]){
+ 
+    for ( auto [w, v] : adj[u])
+      if ( dist[v] > dist[u] + w) {
         dist[v] = dist[u] + w;
-        pq.emplace(dist[v], v);
+        st.emplace(dist[v], v);
       }
+ 
   }
-
+ 
   return dist;
 }
-
