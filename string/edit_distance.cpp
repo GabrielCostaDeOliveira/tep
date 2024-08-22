@@ -2,28 +2,33 @@
 
 using namespace std;
 
-size_t edit_distance( string& a,  string& b){
+int edit_distance(const string& a, const string& b) {
  
-  const size_t oo = 2e9;
+ 
+    const int ADD = 1;
+    const int REMOVE = 1;
+    const int CHANGE = 1;
+ 
+ 
+    size_t m =  a.size();
+    size_t n =  b.size();
+ 
+    
+    vector<vector<int>> memo(m + 1, vector<int>(n + 1));
+ 
+    for (size_t i = 0; i <= m; i++)
+      memo[i][0] = i*REMOVE;
+   
+    for (size_t j = 0; j <= n; j++)
+      memo[0][j] = j*ADD;
+ 
+    for (size_t i = 1; i <= m; i++) 
+        for (size_t j = 1; j <= n; j++) 
+          memo[i][j] = min({memo[i-1][j]  + REMOVE, memo[i][j-1] + ADD,  memo[i-1][j-1] + (a[i-1] == b[j-1] ? 0 : CHANGE) });
+          
 
-  a = " " + a;
-  b = " " + b;
  
-  vector<vector<size_t>> dp(a.size(), vector<size_t> (b.size(), oo));
- 
-  for (size_t i = 0; i < a.size(); i++)
-    dp[i][0] = i;
- 
-  for (size_t j = 0; j < b.size(); j++)
-    dp[0][j] = j;
- 
-  for (int i = 1; i < a.size(); i++)
-    for (int j = 1; j < b.size(); j++){
-      dp[i][j] = min({dp[i-1][j] + 1, dp[i][j-1]+1, dp[i-1][j-1] + (a[i] != b[j] ? 1 : 0)});
-    }
- 
- 
-  return dp[a.size() - 1][b.size() -1];
- 
+    return memo[m][n];
 }
+
 
