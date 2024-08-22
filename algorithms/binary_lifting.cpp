@@ -10,7 +10,7 @@ struct binary_lifting{
 
     far.assign(LOGMAX, std::vector<int>( func_graph.size(), -1));
 
-    for (size_t i = 1; i < func_graph.size(); i++) 
+    for (size_t i = 0; i < func_graph.size(); i++) 
       far[0][i] =  func_graph[i];
 
     for (size_t h = 1; h < LOGMAX; h++ ) 
