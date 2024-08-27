@@ -21,7 +21,7 @@ struct binary_lifting{
   }
 
 
-  size_t forwoard(int h, int i) {
+  size_t jump(int h, int i) {
      /* find hth ancestor of i */
 
     for (size_t k = 0; k < LOGMAX; k++ ) 
