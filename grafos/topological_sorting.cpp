@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
 
-// tarjan
 template <typename T>
 std::vector<T> topological_sort(const std::vector<std::vector<T>> &adj){
   std::vector<T> o;
