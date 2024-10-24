@@ -81,4 +81,3 @@ TEST(SegTree, QUERY_UPDATE_XOR ){
   ASSERT_EQ(st.query(2, 2), 4);
 
 }
-
