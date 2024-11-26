@@ -9,7 +9,7 @@ struct modint {
   long long value;
 
   modint(long long value = 0) : value(value % MOD) {
-    if (value < 0) value + MOD;
+    if (value < 0) value += MOD;
   }
 
   modint operator + (modint const& b) const {
