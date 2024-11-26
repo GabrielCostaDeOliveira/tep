@@ -20,3 +20,11 @@ TEST(MIT, CONSTRUCTOR ) {
 
 }
 
+
+TEST(MIT, MINUS){
+
+   mint a = 428767833 - 768543831;
+   ASSERT_EQ(a.value, ((428767833 - 768543831) % MOD + MOD) );
+
+}
+

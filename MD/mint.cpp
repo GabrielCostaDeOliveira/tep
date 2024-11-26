@@ -8,7 +8,7 @@ struct modint {
 
   long long value;
 
-  modint(long long value = 0) : value(value % MOD) {
+  modint(long long _value = 0) : value(_value % MOD) {
     if (value < 0) value += MOD;
   }
 
