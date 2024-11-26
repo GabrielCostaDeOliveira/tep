@@ -10,3 +10,13 @@ TEST(MIT, INV){
 
 }
 
+TEST(MIT, CONSTRUCTOR ) {
+  mint a = MOD + 1;
+  ASSERT_EQ(a, mint(1));
+
+  mint b = MOD + 1235;
+
+  ASSERT_EQ(b, mint(MOD + 1235));
+
+}
+

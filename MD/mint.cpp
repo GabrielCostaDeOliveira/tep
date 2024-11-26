@@ -79,5 +79,8 @@ struct modint {
 
 
 
-using mint = modint<1'000'000'007>;
+const long long MOD = 1'000'000'007;
+
+
+using mint = modint<MOD>;
 
