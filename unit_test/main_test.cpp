@@ -4,10 +4,10 @@
 #include "./data-structures/SegTree.cpp"
 #include "./data-structures/MergeSegTree.cpp"
 
-#include "./MD/fast_pow.cpp"
-#include "./MD/sieve.cpp"
-#include "./MD/fat.cpp"
-#include "./MD/mint.cpp"
+#include "./math/fast_pow.cpp"
+#include "./math/sieve.cpp"
+#include "./math/fat.cpp"
+#include "./math/mint.cpp"
 
 #include "./graph/hasCycleDirectedGraph.cpp"
 

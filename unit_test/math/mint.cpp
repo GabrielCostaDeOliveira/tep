@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../MD/mint.cpp"
+#include "../../math/mint.cpp"
 
 
 TEST(MIT, INV){

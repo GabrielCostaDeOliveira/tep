@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../MD/sieve.cpp"
+#include "../../math/sieve.cpp"
 
 
 TEST(sieve, simple_test){

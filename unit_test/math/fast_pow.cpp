@@ -1,7 +1,7 @@
 
 #include <gtest/gtest.h>
 
-#include "../../MD/fast_pow.cpp"
+#include "../../math/fast_pow.cpp"
 
 /*TEST(fast_pow, base_case){*/
 /*  ASSERT_EQ(fast_pow(1, 0, 100), 1);*/
