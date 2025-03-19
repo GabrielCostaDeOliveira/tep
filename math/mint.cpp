@@ -1,7 +1,4 @@
-
 #include<bits/stdc++.h>
-#include <iostream>
-#include <stdexcept>
 
 template<int MOD>
 struct modint {
@@ -36,6 +33,16 @@ struct modint {
 
   modint& operator *= (modint const& b) {
     *this = *this * b;
+    return *this;
+  }
+
+  modint& operator -- () {
+    *this -=1;
+    return *this;
+  }
+
+  modint& operator ++ () {
+    *this +=1;
     return *this;
   }
 
@@ -76,7 +83,6 @@ struct modint {
     return exp(MOD - 2);  // Only valid if MOD is prime
   }
 };
-
 
 
 const long long MOD = 1'000'000'007;
