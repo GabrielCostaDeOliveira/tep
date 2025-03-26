@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-
 bool isPrime(long long x){
 
   if (x == 1)

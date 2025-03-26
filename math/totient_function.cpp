@@ -1,14 +1,6 @@
 // Euler's totient function or Euler's phi function is  is the number of integers k in the range 1 ≤ k ≤ n for which the greatest common divisor gcd(n, k) is equal to 1
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-
 long long fast_pow(long long a, long long b) {
-  if ( b == 0)
-    return 1;
-
+  if ( b == 0) return 1;
   long long u = fast_pow(a, b/2);
   return b & 1 ? a * u * u :  u * u;
 }
