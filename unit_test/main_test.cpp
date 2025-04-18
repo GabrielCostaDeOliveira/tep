@@ -5,6 +5,7 @@
 #include "./data-structures/MergeSegTree.cpp"
 
 #include "./math/fast_pow.cpp"
+#include "./math/is_prime.cpp"
 #include "./math/sieve.cpp"
 #include "./math/fat.cpp"
 #include "./math/mint.cpp"

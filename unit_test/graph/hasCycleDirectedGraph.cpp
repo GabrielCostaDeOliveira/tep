@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "../../grafos/hasCycleDirectedGraph.cpp"
+#include "../../graph/hasCycleDirectedGraph.cpp"
 
 
 TEST(CYCLE_DIRECTED_GRAPH, WEAKLY_CONNECTED_GRAPH){
